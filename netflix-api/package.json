@@ -1,0 +1,40 @@
+{
+  "name": "netflix-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10"
+  },
+  "compilerOptions": {
+    "types": ["node", "jest", "express"],
+    "target": "ES6",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "baseUrl": "./src", 
+    "paths": {
+      "express": ["../node_modules/express/lib/express"] 
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".vscode"
+  ]
+}

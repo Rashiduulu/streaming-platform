@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  body {
+    @apply bg-black;
+  }
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  padding-right: 30px;
+}
+
+.custom-select::after {
+  content: "🔻";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-size: 50px;
+  color: red;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 24%;
+}
+
+.slick-prev {
+  left: 3%;
+  z-index: 1 !important;
+}
+
+.slick-next {
+  right: 3%;
+}
+
+/* Loader */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #a4a4a4;
+  border-top-color: red;
+  animation: spinner-animation 1s linear infinite;
+}
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* end of Loader */
